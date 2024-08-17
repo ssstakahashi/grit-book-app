@@ -9,12 +9,10 @@ const GritPage = () => {
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setScore();
-        console.log(e);
-        console.log(result);
     };
-
     const onClick_clear = () => {
-        setResult(initialResult);
+        const clearedResult = { ...initialResult, score: 0 };
+        setResult(clearedResult);
     };
     return (
         <div className="p-8">
@@ -132,6 +130,11 @@ const GritPage = () => {
                                             className=""
                                             name={`radio${index}`}
                                             value={'op01'}
+                                            checked={
+                                                // @ts-ignore
+                                                result[`radio${index}`] ===
+                                                    'op01' || false
+                                            }
                                             onChange={() => {
                                                 setResult({
                                                     ...result,
@@ -157,6 +160,11 @@ const GritPage = () => {
                                             className=""
                                             name={`radio${index}`}
                                             value={'op02'}
+                                            checked={
+                                                // @ts-ignore
+                                                result[`radio${index}`] ===
+                                                    'op02' || false
+                                            }
                                             onChange={() => {
                                                 setResult({
                                                     ...result,
@@ -182,6 +190,11 @@ const GritPage = () => {
                                             className=""
                                             name={`radio${index}`}
                                             value={'op03'}
+                                            checked={
+                                                // @ts-ignore
+                                                result[`radio${index}`] ===
+                                                    'op03' || false
+                                            }
                                             onChange={() => {
                                                 setResult({
                                                     ...result,
@@ -207,6 +220,11 @@ const GritPage = () => {
                                             className=""
                                             name={`radio${index}`}
                                             value={'op04'}
+                                            checked={
+                                                // @ts-ignore
+                                                result[`radio${index}`] ===
+                                                    'op04' || false
+                                            }
                                             onChange={() => {
                                                 setResult({
                                                     ...result,
@@ -232,6 +250,11 @@ const GritPage = () => {
                                             className=""
                                             name={`radio${index}`}
                                             value={'op05'}
+                                            checked={
+                                                // @ts-ignore
+                                                result[`radio${index}`] ===
+                                                    'op05' || false
+                                            }
                                             onChange={() => {
                                                 setResult({
                                                     ...result,
