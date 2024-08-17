@@ -1,5 +1,5 @@
 import { titles } from '../App';
-import { resultAtom, resultSelector } from '../store/atom';
+import { initialResult, resultAtom, resultSelector } from '../store/atom';
 import { useAtom } from 'jotai';
 
 const GritPage = () => {
@@ -14,7 +14,7 @@ const GritPage = () => {
     };
 
     const onClick_clear = () => {
-        // reset(initialResult);
+        setResult(initialResult);
     };
     return (
         <div className="p-8">
@@ -138,6 +138,15 @@ const GritPage = () => {
                                                     [`radio${index}`]: 'op01',
                                                 });
                                             }}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'Enter') {
+                                                    setResult({
+                                                        ...result,
+                                                        [`radio${index}`]:
+                                                            'op01',
+                                                    });
+                                                }
+                                            }}
                                         />
                                     </div>
                                 </td>
@@ -153,6 +162,15 @@ const GritPage = () => {
                                                     ...result,
                                                     [`radio${index}`]: 'op02',
                                                 });
+                                            }}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'Enter') {
+                                                    setResult({
+                                                        ...result,
+                                                        [`radio${index}`]:
+                                                            'op02',
+                                                    });
+                                                }
                                             }}
                                         />
                                     </div>
@@ -170,6 +188,15 @@ const GritPage = () => {
                                                     [`radio${index}`]: 'op03',
                                                 });
                                             }}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'Enter') {
+                                                    setResult({
+                                                        ...result,
+                                                        [`radio${index}`]:
+                                                            'op03',
+                                                    });
+                                                }
+                                            }}
                                         />
                                     </div>
                                 </td>
@@ -186,6 +213,15 @@ const GritPage = () => {
                                                     [`radio${index}`]: 'op04',
                                                 });
                                             }}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'Enter') {
+                                                    setResult({
+                                                        ...result,
+                                                        [`radio${index}`]:
+                                                            'op04',
+                                                    });
+                                                }
+                                            }}
                                         />
                                     </div>
                                 </td>
@@ -201,6 +237,15 @@ const GritPage = () => {
                                                     ...result,
                                                     [`radio${index}`]: 'op05',
                                                 });
+                                            }}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'Enter') {
+                                                    setResult({
+                                                        ...result,
+                                                        [`radio${index}`]:
+                                                            'op05',
+                                                    });
+                                                }
                                             }}
                                         />
                                     </div>
