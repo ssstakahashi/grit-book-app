@@ -279,7 +279,13 @@ const GritPage = () => {
                 </tbody>
             </table>
 
-            <div className="mt-12">
+            <div className="mt-8">
+                <div className="text-center mb-8">
+                    <h2>
+                        あたたのグリット・スコアは、{result.score}
+                        点です！！
+                    </h2>
+                </div>
                 <div className="buttonArea space-x-4 text-center">
                     <button
                         type="submit"
@@ -298,13 +304,6 @@ const GritPage = () => {
                         }
                         value="確定"
                     />
-                </div>
-
-                <div className="text-center mt-12">
-                    <h2>
-                        あたたのグリット・スコアは、{result.score}
-                        点です！！
-                    </h2>
                 </div>
             </div>
         </div>
